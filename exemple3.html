@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Animations</title>
+  </head>
+  <body>
+    <h1 style="background-color: red; border: 1px solid black">
+      Creation d'effects
+    </h1>
+    <button id="b1">Animer le titre</button>
+  </body>
+  <script src="./jquery.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#b1").click(function () {
+        $("h1")
+          .animate({ width: "-=200px" }, { queue: false, duration: 5000 })
+          .animate({ fontSize: "20px" }, { queue: false, duration: 2000 })
+          .fadeTo(200, 0.5);
+      });
+    });
+  </script>
+</html>

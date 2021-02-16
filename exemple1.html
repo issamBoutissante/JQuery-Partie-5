@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Animation</title>
+  </head>
+  <body>
+    <h1>Creation d'effets</h1>
+    <button id="b1">Executer fadeOut() sur le titre</button>
+    <button id="b2">Executer fadeIn() sur le titre</button>
+  </body>
+  <script src="./jquery.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#b1").click(function () {
+        $("h1").fadeOut(2000);
+      });
+      $("#b2").click(function () {
+        $("h1").fadeIn(2000);
+      });
+    });
+  </script>
+</html>

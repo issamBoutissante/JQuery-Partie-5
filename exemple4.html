@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Animations</title>
+  </head>
+  <body>
+    <h1 style="background-color: red; border: 1px solid black">
+      Creation d'effects
+    </h1>
+    <button id="b1">Animer le titre</button>
+    <p>Taille de la queue : <span></span></p>
+  </body>
+  <script src="./jquery.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#b1").click(function () {
+        $("h1")
+          .animate({ width: "-=200px" }, 5000)
+          .animate({ fontSize: "20px" }, 2000)
+          .fadeTo(2000, 0.5);
+      });
+      function enAttente() {
+        var n = $("h1").queue("fx");
+        $("span").text(n.length);
+        setTimeout(enAttente, 10);
+      }
+      enAttente();
+    });
+  </script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Animation</title>
+  </head>
+  <body>
+    <h1 style="background-color: red; border: 1px solid black">
+      Creation d'effets
+    </h1>
+    <button id="b1">Executer slideUp() sur le titre</button>
+    <button id="b2">Executer slideDown() sur le titre</button>
+  </body>
+  <script src="./jquery.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#b1").click(function () {
+        $("h1").slideUp(1000);
+      });
+      $("#b2").click(function () {
+        $("h1").slideDown(1000);
+      });
+    });
+  </script>
+</html>

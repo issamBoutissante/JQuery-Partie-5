@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercice 2</title>
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="b1">Largeur +</button>
+    <button id="b2">Largeur -</button>
+    <button id="b3">Hauteur +</button>
+    <button id="b4">Hauteur -</button>
+    <br />
+    <div></div>
+  </body>
+  <script src="./jquery.js"></script>
+  <script>
+    $(function () {
+      $("#b1").click(function () {
+        $("div").animate({ width: "+=40px" }, "fast");
+      });
+      $("#b2").click(function () {
+        $("div").animate({ width: "-=40px" }, "fast");
+      });
+      $("#b3").click(function () {
+        $("div").animate({ height: "+=40px" }, "fast");
+      });
+      $("#b4").click(function () {
+        $("div").animate({ height: "-=40px" }, "fast");
+      });
+    });
+  </script>
+</html>
